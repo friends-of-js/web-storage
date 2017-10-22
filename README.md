@@ -49,9 +49,18 @@ import { WebStorage } from 'web-storage-api'
 
 const storage = new WebStorage(localStorage)
 
-storage.hasNamespace() // Determine if storage have namespace.
-storage.namespace // Get storage namespace. If storage have not namespace, null would be returned
-storage.length // Get number of elements in storage. If storage have namespace, only length of items with this namespace would be return. If storage have not namespace, only number of items without namespace would be returned, not all items in localStorage
+// Determine if storage have namespace.
+storage.hasNamespace()
+
+// Get storage namespace.
+// If storage have not namespace, null would be returned
+storage.namespace
+
+// Get number of elements in storage.
+// If storage have namespace, only length of items with this namespace would be return.
+// If storage have not namespace, only number of items without namespace would be returned,
+// not all items in localStorage
+storage.length
 ```
 
 ### Asynchronous api
@@ -60,20 +69,31 @@ import { WebStorage } from 'web-storage-api'
 
 const storage = new WebStorage(localStorage)
 
-storage.get('yourkey') // Get item by key
-storage.get('anotherkey', 'default') // If no item with given key exists, 'default' would be returned
+// Get item by key
+storage.get('yourkey')
+// If no item with given key exists, 'default' would be returned
+storage.get('anotherkey', 'default')
 
-storage.key(0) // Get key name by it`s index. The order of keys is user-agent defined, so you should not rely on it.
+// Get key name by it`s index.
+// The order of keys is user-agent defined, so you should not rely on it.
+storage.key(0)
 
-storage.keys() // Return Promise with array of storage keys. The order of keys is user-agent defined, so you should not rely on it.
+// Return Promise with array of storage keys.
+// The order of keys is user-agent defined, so you should not rely on it.
+storage.keys()
 
-storage.has('yourkey') // Determine if item with given key exists in storage
+// Determine if item with given key exists in storage
+storage.has('yourkey')
 
-storage.set('yourkey', {key: 'value'}) // Set item to storage. Item would be converted to json automatically and then saved
+// Set item to storage. Item would be converted to json automatically and then saved
+storage.set('yourkey', {key: 'value'})
 
-storage.delete('yourkey') // Delete item from storage
+// Delete item from storage
+storage.delete('yourkey')
 
-storage.clear() // Clear storage. If storage has namespace only keys with this namespace would be removed. If storage hasn`t namespace only keys without namespace would be removed
+// Clear storage. If storage has namespace only keys with this namespace would be removed.
+// If storage hasn`t namespace only keys without namespace would be removed
+storage.clear()
 
 // Your can asynchronous iterate over storage
 for await (const [value, key] of storage) {
