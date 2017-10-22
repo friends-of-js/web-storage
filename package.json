@@ -1,6 +1,6 @@
 {
   "name": "web-storage-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "lib/module/commonjs/index.js",
   "module": "lib/module/esnext/index.js",
