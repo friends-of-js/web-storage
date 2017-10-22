@@ -102,12 +102,22 @@ for await (const [value, key] of storage) {
 
 // If your need only value for iteration:
 for await (const [value] of storage) {
-  // do something with key and value
+  // do something with value
 }
 
 // If your need only keys for iteration:
 for await (const [, key] of storage) {
-  // do something with key and value
+  // do something with key
+}
+
+// For asynchronous iteration you should provide a polyfill
+// for Symbol.asyncIterator like this:
+if (!('asyncIterator' in Symbol)) {
+  Object.defineProperty(Symbol, 'asyncIterator', {
+    get () {
+      return Symbol.for('Symbol.asyncIterator')
+    }
+  })
 }
 ```
 ### Synchronous api
@@ -143,11 +153,11 @@ for (const [value, key] of storage) {
 
 // If your need only value for iteration:
 for (const [value] of storage) {
-  // do something with key and value
+  // do something with value
 }
 
 // If your need only keys for iteration:
 for (const [, key] of storage) {
-  // do something with key and value
+  // do something with key
 }
 ```
