@@ -1,5 +1,12 @@
 # Web Storage api [![npm version](https://badge.fury.io/js/web-storage-api.svg)](https://badge.fury.io/js/web-storage-api) [![Build Status](https://travis-ci.org/noldors/web-storage-api.svg?branch=master)](https://travis-ci.org/noldors/web-storage-api)
 
+## Installation
+```bash
+yarn add web-storage-api
+# or
+npm install web-storage-api --save
+```
+
 ## Usage
 
 # Create storage instance
