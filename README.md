@@ -1,4 +1,4 @@
-# Web Storage api [![Build Status](https://travis-ci.org/noldors/web-storage-api.svg?branch=master)](https://travis-ci.org/noldors/web-storage-api)
+# Web Storage api [![npm version](https://badge.fury.io/js/web-storage-api.svg)](https://badge.fury.io/js/web-storage-api) [![Build Status](https://travis-ci.org/noldors/web-storage-api.svg?branch=master)](https://travis-ci.org/noldors/web-storage-api)
 
 ## Usage
 
