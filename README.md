@@ -1,5 +1,11 @@
 # Web Storage api [![npm version](https://badge.fury.io/js/web-storage-api.svg)](https://badge.fury.io/js/web-storage-api) [![Build Status](https://travis-ci.org/noldors/web-storage-api.svg?branch=master)](https://travis-ci.org/noldors/web-storage-api)
 
+## Browsers support
+This library need support for Promises and Proxy objects in global environment.
+Compatibility with browsers can be found here:
+* [Proxy](https://caniuse.com/#feat=proxy)
+* [Promises](https://caniuse.com/#feat=promises)
+
 ## Installation
 ```bash
 yarn add web-storage-api
