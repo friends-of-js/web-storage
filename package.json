@@ -1,7 +1,12 @@
 {
   "name": "web-storage-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
+  "author": "Dmitriy Romanov <romanov@noldor.pro>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noldors/web-storage-api"
+  },
   "main": "lib/module/commonjs/index.js",
   "module": "lib/module/esnext/index.js",
   "jsnext:main": "lib/module/esnext/index.js",
