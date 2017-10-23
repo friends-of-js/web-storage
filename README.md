@@ -1,3 +1,5 @@
+# Web Storage api [![Build Status](https://travis-ci.org/noldors/web-storage-api.svg?branch=master)](https://travis-ci.org/noldors/web-storage-api)
+
 ## Usage
 
 # Create storage instance
