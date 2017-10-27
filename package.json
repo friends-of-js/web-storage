@@ -1,5 +1,5 @@
 {
-  "name": "web-storage-api",
+  "name": "@friends-of-js/web-storage",
   "version": "1.0.3",
   "license": "MIT",
   "author": "Dmitriy Romanov <romanov@noldor.pro>",
