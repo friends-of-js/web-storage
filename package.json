@@ -14,6 +14,7 @@
   "types": "lib/types/index.d.ts",
   "unpkg": "lib/browser/index.min.js",
   "jsdelivr": "lib/browser/index.min.js",
+  "keywords": ["localStorage", "sessionStorage", "async", "typescript"],
   "scripts": {
     "h": "yarn npm-scripts-info",
     "i": "yarn h",
