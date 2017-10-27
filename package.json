@@ -5,7 +5,7 @@
   "author": "Dmitriy Romanov <romanov@noldor.pro>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/noldors/web-storage-api"
+    "url": "https://github.com/noldors/web-storage"
   },
   "main": "lib/module/commonjs/index.js",
   "module": "lib/module/esnext/index.js",

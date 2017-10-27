@@ -1,4 +1,4 @@
-# Web Storage [![npm version](https://badge.fury.io/js/web-storage-api.svg)](https://badge.fury.io/js/web-storage-api) [![Build Status](https://travis-ci.org/noldors/web-storage-api.svg?branch=master)](https://travis-ci.org/noldors/web-storage-api)
+# Web Storage [![npm version](https://badge.fury.io/js/@friends-of-js/web-storage.svg)](https://badge.fury.io/js/@friends-of-js/web-storage) [![Build Status](https://travis-ci.org/noldors/web-storage.svg?branch=master)](https://travis-ci.org/noldors/web-storage)
 
 Library with synchronous and asynchronous api for working with localStorage, sessionStorage or any custom storage
 
@@ -10,18 +10,18 @@ Compatibility with browsers can be found here:
 
 ## Installation
 ```bash
-yarn add web-storage-api
+yarn add @friends-of-js/web-storage
 # or
-npm install web-storage-api --save
+npm install @friends-of-js/web-storage --save
 ```
 
 ## Usage
 
 # Create storage instance
 ```js
-import { WebStorage } from 'web-storage-api'
+import { WebStorage } from '@friends-of-js/web-storage'
 // or
-const WebStorage = require('web-storage-api').WebStorage
+const WebStorage = require('@friends-of-js/web-storage').WebStorage
 ```
 
 Create instance for work with localStorage:
@@ -36,7 +36,7 @@ const storage = new WebStorage(sessionStorage)
 
 Instance for working with MemoryStorage. All data would be deleted when window closed.
 ```js
-import {WebStorage, MemoryStorage } from 'web-storage-api'
+import {WebStorage, MemoryStorage } from '@friends-of-js/web-storage'
 const storage = new WebStorage(new MemoryStorage())
 ```
 
@@ -62,7 +62,7 @@ const storage = new WebStorage(localStorage, 'my-namespace')
 
 ## Api
 ```js
-import { WebStorage } from 'web-storage-api'
+import { WebStorage } from '@friends-of-js/web-storage'
 
 const storage = new WebStorage(localStorage)
 
@@ -82,7 +82,7 @@ storage.length
 
 ### Asynchronous api
 ```js
-import { WebStorage } from 'web-storage-api'
+import { WebStorage } from '@friends-of-js/web-storage'
 
 const storage = new WebStorage(localStorage)
 
@@ -139,7 +139,7 @@ if (!('asyncIterator' in Symbol)) {
 ```
 ### Synchronous api
 ```js
-import { WebStorage } from 'web-storage-api'
+import { WebStorage } from '@friends-of-js/web-storage'
 
 const storage = new WebStorage(localStorage)
 // Your can use namespace, it would be added to keys automatically

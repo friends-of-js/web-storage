@@ -43,7 +43,7 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "web-storage-api": [
+      "web-storage": [
         "src/index.ts"
       ]
     }

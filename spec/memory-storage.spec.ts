@@ -1,4 +1,4 @@
-import { MemoryStorage } from 'web-storage-api'
+import { MemoryStorage } from 'web-storage'
 import { expect } from 'chai'
 
 describe('MemoryStorage class', () => {
