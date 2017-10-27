@@ -1,6 +1,6 @@
 {
   "name": "web-storage-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "author": "Dmitriy Romanov <romanov@noldor.pro>",
   "repository": {
@@ -102,7 +102,7 @@
     "ts-node": "3.3.0",
     "tslint": "5.7.0",
     "tslint-config-standard": "6.0.1",
-    "typedoc": "",
+    "typedoc": "0.9.0",
     "typescript": "2.5.3",
     "validate-commit-msg": "^2.14.0",
     "webpack": "^3.8.1",

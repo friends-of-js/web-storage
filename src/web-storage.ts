@@ -1,4 +1,4 @@
-export class WebStorage<V> implements Iterable<any> {
+export class WebStorage<V> implements Iterable<[V, string]>, AsyncIterable<[V, string]> {
   private storage: Storage
   private currentNamespace: string | null
   [index: string]: any
@@ -170,7 +170,7 @@ export class WebStorage<V> implements Iterable<any> {
 
   /**
    * Return key with current namespace.
-   *
+   * @private
    * @param {string} key
    *
    * @return {string}
@@ -185,6 +185,7 @@ export class WebStorage<V> implements Iterable<any> {
 
   /**
    * Returns storage keys only for storage instance namespace.
+   * @private
    *
    * @return {string[]}
    */
@@ -205,6 +206,7 @@ export class WebStorage<V> implements Iterable<any> {
 
   /**
    * Return a proxy object for synchronous api.
+   * @private
    *
    * @return {Proxy}
    */

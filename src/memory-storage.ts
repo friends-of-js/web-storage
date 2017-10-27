@@ -87,6 +87,7 @@ export class MemoryStorage implements Storage {
 
   /**
    * Proxy for object access.
+   * @private
    *
    * @return {any}
    */
