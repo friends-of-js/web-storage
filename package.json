@@ -1,11 +1,11 @@
 {
   "name": "@friends-of-js/web-storage",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "author": "Dmitriy Romanov <romanov@noldor.pro>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/noldors/web-storage"
+    "url": "https://github.com/friends-of-js/web-storage"
   },
   "main": "lib/module/commonjs/index.js",
   "module": "lib/module/esnext/index.js",
@@ -33,7 +33,8 @@
     "doc": "typedoc src --mode modules --target es6 --mode file --theme minimal --out doc-ts && opn doc-ts/index.html",
     "commit": "git-cz",
     "commitmsg": "validate-commit-msg",
-    "prepush": "yarn test"
+    "prepush": "yarn test",
+    "prepublish": "yarn lint && yarn test && yarn build"
   },
   "scripts-info": {
     "h": "Display information about the scripts",
