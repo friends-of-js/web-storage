@@ -17,6 +17,32 @@ npm install @friends-of-js/web-storage --save
 
 ## Usage
 
+# In browser
+```html
+<script src="https://cdn.jsdelivr.net/npm/@friends-of-js/web-storage/lib/browser/index.min.js"></script>
+<script>
+const storage = new WebStorage(localStorage)
+</script>
+```
+
+# With webpack
+```js
+import { WebStorage } from '@friends-of-js/web-storage'
+const storage = new WebStorage(sessionStorage)
+```
+There are 2 versions of package:
+* ES5 version (default)
+* ESNEXT version
+
+if you want use esnext version, you should add this lines to your webpack config:
+```js
+resolve: {
+  alias: {
+    '@friends-of-js/web-storage': '@friends-of-js/web-storage/lib/module/esnext/index.js'
+  }
+}
+```
+
 # Create storage instance
 ```js
 import { WebStorage } from '@friends-of-js/web-storage'
