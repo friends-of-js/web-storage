@@ -21,7 +21,7 @@ npm install @friends-of-js/web-storage --save
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@friends-of-js/web-storage/lib/browser/index.min.js"></script>
 <script>
-const storage = new WebStorage(localStorage)
+const storage = new webStorage.WebStorage(localStorage)
 </script>
 ```
 
