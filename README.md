@@ -1,4 +1,6 @@
-# Web Storage api [![npm version](https://badge.fury.io/js/web-storage-api.svg)](https://badge.fury.io/js/web-storage-api) [![Build Status](https://travis-ci.org/noldors/web-storage-api.svg?branch=master)](https://travis-ci.org/noldors/web-storage-api)
+# Web Storage [![npm version](https://badge.fury.io/js/web-storage-api.svg)](https://badge.fury.io/js/web-storage-api) [![Build Status](https://travis-ci.org/noldors/web-storage-api.svg?branch=master)](https://travis-ci.org/noldors/web-storage-api)
+
+Library with synchronous and asynchronous api for working with localStorage, sessionStorage or any custom storage
 
 ## Browsers support
 This library need support for Promises and Proxy objects in global environment.
