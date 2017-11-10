@@ -10,6 +10,7 @@
 /docs
 .editorconfig
 .gitignore
+.travis.yml
 tsconfig.json
 tslint.json
 yarn.lock
