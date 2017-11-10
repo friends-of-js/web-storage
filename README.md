@@ -1,4 +1,4 @@
-# Web Storage [![npm version](https://badge.fury.io/js/%40friends-of-js%2Fweb-storage.svg)](https://badge.fury.io/js/%40friends-of-js%2Fweb-storage) [![Build Status](https://travis-ci.org/noldors/web-storage.svg?branch=master)](https://travis-ci.org/noldors/web-storage)
+# Web Storage [![npm version](https://badge.fury.io/js/%40friends-of-js%2Fweb-storage.svg)](https://badge.fury.io/js/%40friends-of-js%2Fweb-storage) [![Build Status](https://travis-ci.org/friends-of-js/web-storage.svg?branch=master)](https://travis-ci.org/noldors/web-storage)
 
 Library with synchronous and asynchronous api for working with localStorage, sessionStorage or any custom storage
 

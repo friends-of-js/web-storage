@@ -1,6 +1,6 @@
 import { cd, exec, echo, touch } from 'shelljs'
 import { readFileSync } from 'fs'
-import url from 'url'
+import * as url from 'url'
 
 let repoUrl
 let pkg = JSON.parse(readFileSync('package.json') as any)
@@ -15,10 +15,11 @@ if (typeof pkg.repository === 'object') {
 
 let parsedUrl = url.parse(repoUrl)
 let repository = (parsedUrl.host || '') + (parsedUrl.path || '')
-let ghToken = process.env.GH_TOKEN
-
+let githubToken = process.env.GITHUB_PAGES_TOKEN
+console.log(githubToken)
 echo('Deploying docs...')
-cd('dist/docs')
+exec('yarn docs')
+cd('docs')
 touch('.nojekyll')
 exec('git init')
 exec('git add .')
@@ -26,6 +27,6 @@ exec('git config user.name "--username--"')
 exec('git config user.email "--usermail--"')
 exec('git commit -m "docs(docs): update gh-pages"')
 exec(
-  `git push --force --quiet "https://${ghToken}@${repository}" master:gh-pages`
+  `git push --force --quiet "https://${githubToken}@${repository}" master:gh-pages`
 )
 echo('Docs deployed!')
