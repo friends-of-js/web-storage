@@ -2,6 +2,9 @@
 
 Library with synchronous and asynchronous api for working with localStorage, sessionStorage or any custom storage
 
+## Documentation
+Full documentation can be found here [https://friends-of-js.github.io/web-storage/](https://friends-of-js.github.io/web-storage/)
+
 ## Browsers support
 This library need support for Promises and Proxy objects in global environment.
 Compatibility with browsers can be found here:
