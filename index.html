@@ -1,0 +1,340 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@friends-of-js/web-storage</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@friends-of-js/web-storage</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1> @friends-of-js/web-storage</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<h1 id="web-storage-npm-version-https-badge-fury-io-js-40friends-of-js-2fweb-storage-svg-https-badge-fury-io-js-40friends-of-js-2fweb-storage-build-status-https-travis-ci-org-friends-of-js-web-storage-svg-branch-master-https-travis-ci-org-noldors-web-storage-">Web Storage <a href="https://badge.fury.io/js/%40friends-of-js%2Fweb-storage"><img src="https://badge.fury.io/js/%40friends-of-js%2Fweb-storage.svg" alt="npm version"></a> <a href="https://travis-ci.org/noldors/web-storage"><img src="https://travis-ci.org/friends-of-js/web-storage.svg?branch=master" alt="Build Status"></a></h1>
+				<p>Library with synchronous and asynchronous api for working with localStorage, sessionStorage or any custom storage</p>
+				<h2 id="documentation">Documentation</h2>
+				<p>Full documentation can be found here <a href="https://friends-of-js.github.io/web-storage/">https://friends-of-js.github.io/web-storage/</a></p>
+				<h2 id="browsers-support">Browsers support</h2>
+				<p>This library need support for Promises and Proxy objects in global environment.
+				Compatibility with browsers can be found here:</p>
+				<ul>
+					<li><a href="https://caniuse.com/#feat=proxy">Proxy</a></li>
+					<li><a href="https://caniuse.com/#feat=promises">Promises</a></li>
+				</ul>
+				<h2 id="installation">Installation</h2>
+				<pre><code class="lang-bash">yarn add @friends-of-js/web-storage
+<span class="hljs-comment"># or</span>
+npm install @friends-of-js/web-storage --save
+</code></pre>
+				<h2 id="usage">Usage</h2>
+				<h1 id="in-browser">In browser</h1>
+				<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/@friends-of-js/web-storage/lib/browser/index.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+<span class="hljs-keyword">const</span> storage = <span class="hljs-keyword">new</span> webStorage.WebStorage(localStorage)
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+				<h1 id="with-webpack">With webpack</h1>
+				<pre><code class="lang-js"><span class="hljs-keyword">import</span> { WebStorage } <span class="hljs-keyword">from</span> <span class="hljs-string">'@friends-of-js/web-storage'</span>
+<span class="hljs-keyword">const</span> storage = <span class="hljs-keyword">new</span> WebStorage(sessionStorage)
+</code></pre>
+				<p>There are 2 versions of package:</p>
+				<ul>
+					<li>ES5 version (default)</li>
+					<li>ESNEXT version</li>
+				</ul>
+				<p>if you want use esnext version, you should add this lines to your webpack config:</p>
+				<pre><code class="lang-js">resolve: {
+  <span class="hljs-attr">alias</span>: {
+    <span class="hljs-string">'@friends-of-js/web-storage'</span>: <span class="hljs-string">'@friends-of-js/web-storage/lib/module/esnext/index.js'</span>
+  }
+}
+</code></pre>
+				<h1 id="create-storage-instance">Create storage instance</h1>
+				<pre><code class="lang-js"><span class="hljs-keyword">import</span> { WebStorage } <span class="hljs-keyword">from</span> <span class="hljs-string">'@friends-of-js/web-storage'</span>
+<span class="hljs-comment">// or</span>
+<span class="hljs-keyword">const</span> WebStorage = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@friends-of-js/web-storage'</span>).WebStorage
+</code></pre>
+				<p>Create instance for work with localStorage:</p>
+				<pre><code class="lang-js"><span class="hljs-keyword">const</span> storage = <span class="hljs-keyword">new</span> WebStorage(localStorage)
+</code></pre>
+				<p>Create instance for work with sessionStorage. All data would be deleted when window closed.</p>
+				<pre><code class="lang-js"><span class="hljs-keyword">const</span> storage = <span class="hljs-keyword">new</span> WebStorage(sessionStorage)
+</code></pre>
+				<p>Instance for working with MemoryStorage. All data would be deleted when window closed.</p>
+				<pre><code class="lang-js"><span class="hljs-keyword">import</span> {WebStorage, MemoryStorage } <span class="hljs-keyword">from</span> <span class="hljs-string">'@friends-of-js/web-storage'</span>
+<span class="hljs-keyword">const</span> storage = <span class="hljs-keyword">new</span> WebStorage(<span class="hljs-keyword">new</span> MemoryStorage())
+</code></pre>
+				<p>WebStorage can be initialized with any object that implements Storage interface:</p>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">interface</span> Storage {
+    readonly length: <span class="hljs-built_in">number</span>;
+    clear(): <span class="hljs-built_in">void</span>;
+    getItem(key: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span>;
+    key(index: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span>;
+    removeItem(key: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">void</span>;
+    setItem(key: <span class="hljs-built_in">string</span>, data: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">void</span>;
+    [key: <span class="hljs-built_in">string</span>]: <span class="hljs-built_in">any</span>;
+    [index: <span class="hljs-built_in">number</span>]: <span class="hljs-built_in">string</span>;
+}
+</code></pre>
+				<h2 id="namespace-support">Namespace support</h2>
+				<p>When your create WebStorage instance, as second parameter your can pass namespace, and then you will work only with data in given namespace</p>
+				<pre><code class="lang-js"><span class="hljs-keyword">const</span> storage = <span class="hljs-keyword">new</span> WebStorage(localStorage, <span class="hljs-string">'my-namespace'</span>)
+</code></pre>
+				<h2 id="api">Api</h2>
+				<pre><code class="lang-js"><span class="hljs-keyword">import</span> { WebStorage } <span class="hljs-keyword">from</span> <span class="hljs-string">'@friends-of-js/web-storage'</span>
+
+<span class="hljs-keyword">const</span> storage = <span class="hljs-keyword">new</span> WebStorage(localStorage)
+
+<span class="hljs-comment">// Determine if storage have namespace.</span>
+storage.hasNamespace()
+
+<span class="hljs-comment">// Get storage namespace.</span>
+<span class="hljs-comment">// If storage have not namespace, null would be returned</span>
+storage.namespace
+
+<span class="hljs-comment">// Get number of elements in storage.</span>
+<span class="hljs-comment">// If storage have namespace, only length of items with this namespace would be return.</span>
+<span class="hljs-comment">// If storage have not namespace, only number of items without namespace would be returned,</span>
+<span class="hljs-comment">// not all items in localStorage</span>
+storage.length
+</code></pre>
+				<h3 id="asynchronous-api">Asynchronous api</h3>
+				<pre><code class="lang-js"><span class="hljs-keyword">import</span> { WebStorage } <span class="hljs-keyword">from</span> <span class="hljs-string">'@friends-of-js/web-storage'</span>
+
+<span class="hljs-keyword">const</span> storage = <span class="hljs-keyword">new</span> WebStorage(localStorage)
+
+<span class="hljs-comment">// Get item by key</span>
+storage.get(<span class="hljs-string">'yourkey'</span>)
+<span class="hljs-comment">// If no item with given key exists, 'default' would be returned</span>
+storage.get(<span class="hljs-string">'anotherkey'</span>, <span class="hljs-string">'default'</span>)
+
+<span class="hljs-comment">// Get key name by it`s index.</span>
+<span class="hljs-comment">// The order of keys is user-agent defined, so you should not rely on it.</span>
+storage.key(<span class="hljs-number">0</span>)
+
+<span class="hljs-comment">// Return Promise with array of storage keys.</span>
+<span class="hljs-comment">// The order of keys is user-agent defined, so you should not rely on it.</span>
+storage.keys()
+
+<span class="hljs-comment">// Determine if item with given key exists in storage</span>
+storage.has(<span class="hljs-string">'yourkey'</span>)
+
+<span class="hljs-comment">// Set item to storage. Item would be converted to json automatically and then saved</span>
+storage.set(<span class="hljs-string">'yourkey'</span>, {<span class="hljs-attr">key</span>: <span class="hljs-string">'value'</span>})
+
+<span class="hljs-comment">// Delete item from storage</span>
+storage.delete(<span class="hljs-string">'yourkey'</span>)
+
+<span class="hljs-comment">// Clear storage. If storage has namespace only keys with this namespace would be removed.</span>
+<span class="hljs-comment">// If storage hasn`t namespace only keys without namespace would be removed</span>
+storage.clear()
+
+<span class="hljs-comment">// Your can asynchronous iterate over storage</span>
+<span class="hljs-keyword">for</span> <span class="hljs-keyword">await</span> (<span class="hljs-keyword">const</span> [value, key] <span class="hljs-keyword">of</span> storage) {
+  <span class="hljs-comment">// do something with key and value</span>
+}
+
+<span class="hljs-comment">// If your need only value for iteration:</span>
+<span class="hljs-keyword">for</span> <span class="hljs-keyword">await</span> (<span class="hljs-keyword">const</span> [value] <span class="hljs-keyword">of</span> storage) {
+  <span class="hljs-comment">// do something with value</span>
+}
+
+<span class="hljs-comment">// If your need only keys for iteration:</span>
+<span class="hljs-keyword">for</span> <span class="hljs-keyword">await</span> (<span class="hljs-keyword">const</span> [, key] <span class="hljs-keyword">of</span> storage) {
+  <span class="hljs-comment">// do something with key</span>
+}
+
+<span class="hljs-comment">// For asynchronous iteration you should provide a polyfill</span>
+<span class="hljs-comment">// for Symbol.asyncIterator like this:</span>
+<span class="hljs-keyword">if</span> (!(<span class="hljs-string">'asyncIterator'</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">Symbol</span>)) {
+  <span class="hljs-built_in">Object</span>.defineProperty(<span class="hljs-built_in">Symbol</span>, <span class="hljs-string">'asyncIterator'</span>, {
+    get () {
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">Symbol</span>.for(<span class="hljs-string">'Symbol.asyncIterator'</span>)
+    }
+  })
+}
+</code></pre>
+				<h3 id="synchronous-api">Synchronous api</h3>
+				<pre><code class="lang-js"><span class="hljs-keyword">import</span> { WebStorage } <span class="hljs-keyword">from</span> <span class="hljs-string">'@friends-of-js/web-storage'</span>
+
+<span class="hljs-keyword">const</span> storage = <span class="hljs-keyword">new</span> WebStorage(localStorage)
+<span class="hljs-comment">// Your can use namespace, it would be added to keys automatically</span>
+<span class="hljs-keyword">const</span> storage = <span class="hljs-keyword">new</span> WebStorage(localStorage, <span class="hljs-string">'namespace'</span>)
+
+<span class="hljs-comment">// Set item to storage</span>
+storage.yourkey = { <span class="hljs-attr">objectKey</span>: <span class="hljs-string">'value'</span> } <span class="hljs-comment">// or</span>
+storage[<span class="hljs-string">'yourkey'</span>] = { <span class="hljs-attr">objectKey</span>: <span class="hljs-string">'value'</span> }
+
+<span class="hljs-comment">// Get item from storage</span>
+<span class="hljs-keyword">const</span> value = storage.yourkey <span class="hljs-comment">// or</span>
+<span class="hljs-keyword">const</span> value = storage[<span class="hljs-string">'yourkey'</span>]
+
+<span class="hljs-comment">// Check if item exists in storage</span>
+<span class="hljs-keyword">const</span> exists = <span class="hljs-string">'yourkey'</span> <span class="hljs-keyword">in</span> storage
+
+<span class="hljs-comment">// Delete item from storage</span>
+<span class="hljs-keyword">delete</span> storage.yourkey <span class="hljs-comment">// or</span>
+<span class="hljs-keyword">delete</span> storage[<span class="hljs-string">'yourkey'</span>]
+
+<span class="hljs-comment">// Get keys from storage. Return array of keys</span>
+<span class="hljs-keyword">const</span> keys = <span class="hljs-built_in">Object</span>.getOwnPropertyNames(storage)
+
+<span class="hljs-comment">// Your can synchronous iterate over storage</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> [value, key] <span class="hljs-keyword">of</span> storage) {
+  <span class="hljs-comment">// do something with key and value</span>
+}
+
+<span class="hljs-comment">// If your need only value for iteration:</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> [value] <span class="hljs-keyword">of</span> storage) {
+  <span class="hljs-comment">// do something with value</span>
+}
+
+<span class="hljs-comment">// If your need only keys for iteration:</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> [, key] <span class="hljs-keyword">of</span> storage) {
+  <span class="hljs-comment">// do something with key</span>
+}
+</code></pre>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/memorystorage.html" class="tsd-kind-icon">Memory<wbr>Storage</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/webstorage.html" class="tsd-kind-icon">Web<wbr>Storage</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
