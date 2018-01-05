@@ -153,7 +153,7 @@ describe('WebStorage class', () => {
   })
 
   describe('clear()', () => {
-    it('should delete all item from storage based on namespace', async () => {
+    it('should delete all items from storage based on namespace', async () => {
       expect(await storage.keys()).to.include.members(['simpleKey', 'objectKey'])
       await storage.clear()
       expect(await storage.keys()).to.be.deep.equal([])

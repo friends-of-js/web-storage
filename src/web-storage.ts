@@ -213,7 +213,7 @@ export class WebStorage<V> implements Iterable<[V, string]>, AsyncIterable<[V, s
   private createProxy () {
     return new Proxy<WebStorage<V>>(this, {
       get (target: WebStorage<V>, key: string): any {
-        if (!(key in target)) {
+        if (!(key in target) && typeof key !== 'symbol') {
           return JSON.parse(target.storage.getItem(target.keyWithNamespace(key)) as string)
         }
 
