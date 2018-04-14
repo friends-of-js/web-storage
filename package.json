@@ -81,7 +81,7 @@
     "cz-conventional-changelog": "^2.1.0",
     "declaration-bundler-webpack-plugin": "^1.0.3",
     "dts-bundle": "^0.7.3",
-    "friendly-errors-webpack-plugin": "^1.6.1",
+    "friendly-errors-webpack-plugin": "^1.7.0",
     "husky": "0.14.3",
     "istanbul-instrumenter-loader": "^3.0.0",
     "karma": "^1.7.1",
