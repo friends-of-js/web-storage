@@ -76,7 +76,7 @@
     "@types/webpack-dev-middleware": "^1.9.4",
     "awesome-typescript-loader": "^3.3.0",
     "chai": "^4.1.2",
-    "colors": "^1.1.2",
+    "colors": "^1.2.1",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
     "declaration-bundler-webpack-plugin": "^1.0.3",
