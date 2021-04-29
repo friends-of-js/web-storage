@@ -1,0 +1,25 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "07:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@types/webpack"
+    versions:
+    - 4.41.26
+    - 5.0.0
+  - dependency-name: "@types/webpack-dev-middleware"
+    versions:
+    - 4.1.0
+  - dependency-name: tslib
+    versions:
+    - 2.1.0
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
+  - dependency-name: handlebars
+    versions:
+    - 4.7.6
