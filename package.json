@@ -90,7 +90,7 @@
     "karma-coverage": "^1.1.1",
     "karma-coverage-allsources": "^0.0.4",
     "karma-coverage-istanbul-reporter": "^1.3.0",
-    "karma-firefox-launcher": "^1.0.1",
+    "karma-firefox-launcher": "^2.1.1",
     "karma-mocha": "^1.3.0",
     "karma-mocha-reporter": "^2.2.5",
     "karma-notify-reporter": "^1.0.1",
